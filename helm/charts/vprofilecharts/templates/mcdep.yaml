@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: vpromc
-  labels:
+  labels: 
     app: vpromc
 spec:
   selector:
@@ -15,8 +15,8 @@ spec:
         app: vpromc
     spec:
       containers:
-      - name: vpromc
-        image: memcached
-        ports:
-        - name: vpromc-port
-          containerPort: 11211
+        - name: vpromc
+          image: memcached
+          ports:
+            - name: vpromc-port
+              containerPort: 11211

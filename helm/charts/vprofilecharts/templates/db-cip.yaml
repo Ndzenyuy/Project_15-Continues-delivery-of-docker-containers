@@ -10,3 +10,4 @@ spec:
   selector:
     app: vprodb
   type: ClusterIP
+
