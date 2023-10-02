@@ -371,7 +371,7 @@ This project builds a CICD pipeline of a web application that is deployed on a k
     ```
     kubectl get svc -o wide -n prod
     ```
-    ![]()
+    ![](https://github.com/Ndzenyuy/Project_15-Continues-delivery-of-docker-containers/blob/main/images/elb%20endpoint.png)
 
     - Copy the load balancer endpoint and search on the browser
     ![](https://github.com/Ndzenyuy/Project_15-Continues-delivery-of-docker-containers/blob/main/images/login%20screen.png)
