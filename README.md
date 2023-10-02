@@ -299,7 +299,10 @@ This project builds a CICD pipeline of a web application that is deployed on a k
     mkdir jenkins-slave
     sudo apt install openjdk-11-jdk -y
     sudo mkdir /opt/jenkins-slave
-    sudo chown ubuntu.ubuntu /opt/jenkins-slave -R   
+    sudo chown ubuntu.ubuntu /opt/jenkins-slave -R  
+
+    # Create prod namespace where the 
+    kubectl create namespace prod
     ```
 
     - To the AWS console change inbound rules for the kops security group
@@ -338,3 +341,37 @@ This project builds a CICD pipeline of a web application that is deployed on a k
      ![](kops successful login)
      ![](jenkins nodes)
      ![](kops nodes)
+
+5. Execution: Create a new pipeline on Jenkins
+
+    Jenkins -> new Item:
+    ```
+    - item name = kube-cicd
+    - pipeline = true -> ok
+    - pipeline:
+        Definition: Pipeline script from SCM
+        SCM: Git
+        Repository url: https://github.com/Ndzenyuy/Project_15-Continues-delivery-of-docker-containers.git (past the url to your repo)
+        Branch specifier: */main
+        script path: Jenkinsfile
+          -> save
+    - Build pipeline: Build now
+
+    ```
+    ![](pipeline successful build)
+    ![](image in dockerhub)
+
+    - SSH into kops terminal to obtain the endpoint to the created load balancer
+
+    ```
+    kubectl get svc -o wide -n prod
+    ```
+    ![](load balancer endpoint in service)
+
+    - Copy the load balancer endpoint and search on the browser
+    ![](login page)
+    ![](successful login)
+    ![]()
+    ![]()
+    ![]()
+
