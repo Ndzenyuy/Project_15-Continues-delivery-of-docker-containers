@@ -3,7 +3,7 @@
 This project builds a CICD pipeline of a web application that is deployed on a kubernetes cluster. Once code is pushed to Github, Jenkins pipeline is triggered via webhook to first run code tests on sonarqube server, if quality gates are passed maven builds the artifact, the artifact is in turn containerised and stored to Dockerhub. Next Helm packages and deploys the setup on a kubernetes cluster.
 
 ## Architecture
-![](architecture)
+![](https://github.com/Ndzenyuy/Project_15-Continues-delivery-of-docker-containers/blob/main/images/Project15_architecture.jpg)
 
 ## Prereqs
  - Project 5: Continues integration of a Java webapp
@@ -71,7 +71,7 @@ This project builds a CICD pipeline of a web application that is deployed on a k
     ```
     Note: use your domain name for the flag --name, and your created s3 bucket for --state
 
-    ![](kops clusters validation)
+    ![](https://github.com/Ndzenyuy/Project_15-Continues-delivery-of-docker-containers/blob/main/images/cluster%20validated.png)
 
     - Install Helm: 
         ```
@@ -338,9 +338,9 @@ This project builds a CICD pipeline of a web application that is deployed on a k
 
 
      Check the logs, we should see Agent succesfully connected and online
-     ![](kops successful login)
-     ![](jenkins nodes)
-     ![](kops nodes)
+     ![](https://github.com/Ndzenyuy/Project_15-Continues-delivery-of-docker-containers/blob/main/images/node%20added.png)
+     ![](https://github.com/Ndzenyuy/Project_15-Continues-delivery-of-docker-containers/blob/main/images/added%20nodes.png)
+     ![](https://github.com/Ndzenyuy/Project_15-Continues-delivery-of-docker-containers/blob/main/images/kops%20node.png)
 
 5. Execution: Create a new pipeline on Jenkins
 
@@ -358,8 +358,8 @@ This project builds a CICD pipeline of a web application that is deployed on a k
     - Build pipeline: Build now
 
     ```
-    ![](pipeline successful build)
-    ![](image in dockerhub)
+    ![](https://github.com/Ndzenyuy/Project_15-Continues-delivery-of-docker-containers/blob/main/images/pipeline%20successful%20build.png)
+    
 
     - SSH into kops terminal to obtain the endpoint to the created load balancer
 
