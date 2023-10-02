@@ -359,6 +359,7 @@ This project builds a CICD pipeline of a web application that is deployed on a k
 
     ```
     ![](https://github.com/Ndzenyuy/Project_15-Continues-delivery-of-docker-containers/blob/main/images/pipeline%20successful%20build.png)
+    ![]()
     
 
     - SSH into kops terminal to obtain the endpoint to the created load balancer
