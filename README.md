@@ -358,8 +358,12 @@ This project builds a CICD pipeline of a web application that is deployed on a k
     - Build pipeline: Build now
 
     ```
+   Pipeline succesful build:
     ![](https://github.com/Ndzenyuy/Project_15-Continues-delivery-of-docker-containers/blob/main/images/pipeline%20successful%20build.png)
-    ![]()
+   Image uploaded to dockerhub
+    ![](https://github.com/Ndzenyuy/Project_15-Continues-delivery-of-docker-containers/blob/main/images/image%20in%20dockerhub.png)
+   Code analysis with Sonarqube service
+    ![](https://github.com/Ndzenyuy/Project_15-Continues-delivery-of-docker-containers/blob/main/images/code%20analysis%20with%20sonar.png)
     
 
     - SSH into kops terminal to obtain the endpoint to the created load balancer
@@ -367,12 +371,12 @@ This project builds a CICD pipeline of a web application that is deployed on a k
     ```
     kubectl get svc -o wide -n prod
     ```
-    ![](load balancer endpoint in service)
+    ![]()
 
     - Copy the load balancer endpoint and search on the browser
-    ![](login page)
-    ![](successful login)
-    ![]()
-    ![]()
-    ![]()
+    ![](https://github.com/Ndzenyuy/Project_15-Continues-delivery-of-docker-containers/blob/main/images/login%20screen.png)
+    ![](https://github.com/Ndzenyuy/Project_15-Continues-delivery-of-docker-containers/blob/main/images/succesful%20login%20page.png)
+    ![](https://github.com/Ndzenyuy/Project_15-Continues-delivery-of-docker-containers/blob/main/images/data%20loaded%20from%20database.png)
+    ![](https://github.com/Ndzenyuy/Project_15-Continues-delivery-of-docker-containers/blob/main/images/cluster%20validated.png)
+    ![](https://github.com/Ndzenyuy/Project_15-Continues-delivery-of-docker-containers/blob/main/images/testing%20memcached.png)
 
